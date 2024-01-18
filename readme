@@ -1,0 +1,108 @@
+=====================================================
+ASIX AX88178 USB2.0 Gigabit Ethernet Network Adapter
+ASIX AX88772 USB2.0 Fast Ethernet Network Adapter
+ASIX AX88772A USB2.0 Fast Ethernet Network Adapter
+Driver Compilation & Configuration on the Linux
+=====================================================
+
+This driver supports kernel versions from 2.6.14 to 2.6.26.
+
+==================
+Revision History :
+==================
+Version 1.0.6		Nov. 06, 2008
+ * Fixups for compilation issues in kernel versions 2.6.25 and later.
+
+Version 1.0.5           Sep. 26, 2007
+ * Added to support AX88772A
+ * Fixups for compilation issues in kernel version 2.6.22.
+
+Version 1.0.4           Sep. 03, 2007
+ * Corrected the default value of receive filter.
+ * Corrected the value of IPG register.
+
+Version 1.0.3           Oct. 23, 2006
+ * Fixed broken initialization on big-endian.
+
+Version 1.0.2		Sep. 22, 2006
+ * Fixed bug in function set_media.
+
+Version	1.0.1		Sep. 20, 2006
+ * Fixups for compilation issues in newest kernel version 2.6.16.
+ * External PHY support.
+
+Version	1.0.0		Dec. 20, 2005
+ * New release.
+
+================
+Prerequisites
+================
+
+Prepare to build the AX88772/AX88772A/AX88178 driver, you need the Linux kernel sources 
+installed on the build machine, and make sure that the version of the running kernel 
+must match the installed kernel sources.
+If you don't have the kernel sources, you can get it from www.kernel.org or contact to 
+your Linux distributor. If you don't know how to do, please refer to KERNEL-HOWTO.
+
+Note1: Please make sure the kernel is built with one of the "Support for Host-side, 
+       EHCI, OHCI, or UHCI" option support.
+
+Note2: Please make sure the kernel is built with "Multi-purpose USB Networking Framework" 
+       option support.
+
+Note3: Check the necessary header file "usbnet.h" for building this driver. Without 
+       this file, the driver compilation will fail and encounter hundreds of errors 
+       all throuhout the souces. This file was located in different directory 
+       according to your kernel version:
+
+       1. Linux kernel versions from 2.6.14 to 2.6.21
+          /Path-to-your-Linux-kernel-sources/drivers/usb/net/usbnet.h
+
+       2. Linux kernel versions from 2.6.22 to 2.6.24
+          /Path-to-your-Linux-kernel-sources/drivers/net/usb/usbnet.h
+
+       3. Linux kernel versions from 2.6.25 to 2.6.26
+          /Path-to-your-Linux-kernel-sources/include/linux/usb/usbnet.h
+
+
+================
+Getting Start
+================
+
+1. Extract the compressed driver source file to your template directory by the following command:
+
+	[root@localhost home]# tar -xf AX88772_772A_178_LINUX2.6.25_REV106_20080901.tar.bz2
+
+2. Now, the AX88772_772A_178_LINUX2.6.25_REV106_20080901/ driver directory should be extracted
+   under current directory. Go to the driver directory, and executing the following command to
+   compiler the AX88772/AX88772A/AX88178 driver.
+ 
+	[root@localhost AX88772_772A_178_LINUX2.6.25_REV106_20080901]# make
+			
+3. If the compilation is well, the asix.ko will be created under the current directory.
+ 
+4. If you want to use modprobe command to mount the AX88772/AX88772A/AX88178 driver, executing
+   the following command to install the driver into your Linux.
+
+	[root@localhost AX88772/AX88772A/AX88178]# make install
+
+
+================
+Usage
+================
+
+1. If you want to load the AX88772/AX88772A/AX88178 driver manually, go to the driver directory and
+   execute the following commands:
+
+	[root@localhost AX88772/AX88772A/AX88178]# modprobe usbnet
+	[root@localhost AX88772/AX88772A/AX88178]# insmod asix.ko
+
+2. If you had installed the driver during driver compilation, then you can use the following command to 
+   load the driver automatically.
+
+	[root@localhost anywhere]# modprobe asix
+
+If you want to unload the AX88772/AX88772A/AX88178 driver, just executing the following command:
+
+	[root@localhost anywhere]# rmmod asix
+	[root@localhost anywhere]# rmmod usbnet

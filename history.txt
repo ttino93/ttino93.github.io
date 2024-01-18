@@ -1,0 +1,60 @@
+//======================================================================
+// ASIX AX88772A & AX88772 Windows 7 Drivers Setup Program
+// Revision History
+//
+// This document describes the major changes, additions and bug fixes made 
+// to the program between released versions. 
+//======================================================================
+
+Version 1.0.0.4 (2009-10-14)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit WHQL driver v3.12.3.2
+   AX88772A & AX88772 Windows 7 64-bit WHQL driver v3.14.3.2
+2. Set the Languages Dialog to NO. 
+
+Version 1.0.0.3 (2009-10-02)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit WHQL driver v3.12.3.2
+   AX88772A & AX88772 Windows 7 64-bit WHQL driver v3.14.3.2
+2. Fixed the un-installed issue if the setup program is stored in USB or CD. 
+3. Built the setup program by using InstallShield2010 Premier from this verison.
+
+Version 1.0.0.2 (2009-08-20)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit WHQL driver v3.12.3.2
+   AX88772A & AX88772 Windows 7 64-bit WHQL driver v3.14.3.2
+2. Fixed the issue of LAN device remained in the Device Manager after uninstalling the LAN driver from control panel.
+
+Version 1.0.0.1 (2009-07-15)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit WHQL driver v3.12.3.2
+   AX88772A & AX88772 Windows 7 64-bit WHQL driver v3.14.3.2
+2. Modified the properties of MSI Command Line Arguments in InstallShield. The itinerary in InstallShield is
+   Installation Designer -> Releases -> CDROM_IMAGE-> Setup.exe:
+	Required Execution Elevated: Administrator
+	Advertise If Prerequisites Are Elevated Advertise: Full UI
+
+Version 1.0.0.0 (2009-06-23)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit WHQL driver v3.12.3.2
+   AX88772A & AX88772 Windows 7 64-bit WHQL driver v3.14.3.2
+
+Version 0.0.0.2 (2009-06-05)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7 32-bit driver v3.12.3.1 (Initial release for Windows 7 32-bit system)
+   AX88772A & AX88772 Windows 7 64-bit driver v3.14.3.1 (Initial release for Windows 7 64-bit system)
+2. The revision number of AX88772A & AX88772 Windows 7 32-bit/64-bit drivers were separate from Vista driver.    
+
+Version 0.0.0.1 (2009-06-03)
+1. This setup program includes the following AX88772A & AX88772 Windows 7 32-bit/64-bit drivers.
+   AX88772A & AX88772 Windows 7/Vista 32-bit driver v3.8.3.18
+   AX88772A & AX88772 Windows 7/Vista 64-bit driver v3.10.3.18
+
+
+
+Note:
+=====
+Before run the setup program to install newer driver, please uninstall the older driver
+that user installed before. User can check the list in "Control Panel" -> "Programs" ->
+"Programs and Features". If there is a AX88772A/AX88772 driver in the list, uninstall it
+before run the setup program.
